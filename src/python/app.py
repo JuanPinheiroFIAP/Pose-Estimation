@@ -72,10 +72,10 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
                 left_eye_diff = abs(left_eye_top.y - left_eye_bottom.y)
 
                 # Se a diferença for muito pequena, o olho está fechado
-                if right_eye_diff < 0.002:
+                if right_eye_diff < 0.01:
                     print("Olho direito fechado")
                     arduino.write(str(3).encode())  # Envia '3' como byte
-                if left_eye_diff < 0.002:
+                if left_eye_diff < 0.01:
                     print("Olho esquerdo fechado")
                     arduino.write(str(4).encode())  # Envia '4' como byte
 

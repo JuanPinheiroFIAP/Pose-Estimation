@@ -53,6 +53,12 @@ void loop() {
       digitalWrite(pin2, LOW);
       digitalWrite(pin3, LOW);
       Serial.println("Olho esquerdo fechado");
+    } else{
+      // Desliga todos os LEDs inicialmente
+      digitalWrite(pin1, LOW);
+      digitalWrite(pin2, LOW);
+      digitalWrite(pin3, LOW);
+      digitalWrite(pin4, LOW);
     }
   }
 }
